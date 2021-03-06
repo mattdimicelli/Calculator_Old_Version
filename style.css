@@ -14,9 +14,11 @@
   border-color: black;
   border-style: solid;
   text-align: center;
+  padding: 20px;
 }
-.display {
+div.display {
   grid-area: display;
+  text-align: left;
 }
 .zero {
   grid-area: zero;
