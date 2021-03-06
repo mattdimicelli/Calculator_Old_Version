@@ -1,0 +1,74 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "display display display display . ."
+    "seven eight nine dividedBy backspace clear"
+    "four five six times backspace clear"
+    "one two three minus equals equals"
+    "zero point . plus equals equals";
+}
+.container > div {
+  background-color: lightblue;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+}
+.display {
+  grid-area: display;
+}
+.zero {
+  grid-area: zero;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.point {
+  grid-area: point;
+}
+.dividedBy {
+  grid-area: dividedBy;
+}
+.times {
+  grid-area: times;
+}
+.minus {
+  grid-area: minus;
+}
+.plus {
+  grid-area: plus;
+}
+.backspace {
+  grid-area: backspace;
+}
+.clear {
+  grid-area: clear;
+}
+.equals {
+  grid-area: equals;
+}
