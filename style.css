@@ -168,6 +168,9 @@ div.display {
   margin-right: 1rem;
   margin-top: 1rem;
 }
+.border {
+  border: 0.2rem solid black !important;
+}
 div.red {
   background-color: red;
 }
@@ -226,15 +229,24 @@ div.red {
 div.backspace {
   grid-area: backspace;
   align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 div.clear {
   grid-area: clear;
   margin-right: 1rem;
   align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 div.equals {
   grid-area: equals;
   margin-bottom: 1rem;
   margin-right: 1rem;
   align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

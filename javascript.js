@@ -63,66 +63,151 @@ btnBackspace.addEventListener("click", backspaceAction);
 const btnEquals = document.querySelector(".equals");
 btnEquals.addEventListener("click", equalsAction);
 
+const keyup = document.addEventListener("keyup", (e) => {
+  switch (e.key) {
+    case "0":
+      btn0.classList.remove("border");
+      break;
+    case "1":
+      btn1.classList.remove("border");
+      break;
+    case "2":
+      btn2.classList.remove("border");
+      break;
+    case "3":
+      btn3.classList.remove("border");
+      break;
+    case "4":
+      btn4.classList.remove("border");
+      break;
+    case "5":
+      btn5.classList.remove("border");
+      break;
+    case "6":
+      btn6.classList.remove("border");
+      break;
+    case "7":
+      btn7.classList.remove("border");
+      break;
+    case "8":
+      btn8.classList.remove("border");
+      break;
+    case "9":
+      btn9.classList.remove("border");
+      break;
+    case ".":
+      btnDecimalPoint.classList.remove("border");
+      break;
+    case "=":
+      btnEquals.classList.remove("border");
+      break;
+    case "/":
+      btnDividedBy.classList.remove("border");
+      break;
+    case "*":
+      btnTimes.classList.remove("border");
+      break;
+    case "-":
+      btnMinus.classList.remove("border");
+      break;
+    case "+":
+      btnPlus.classList.remove("border");
+      break;
+    case "Enter":
+      btnEquals.classList.remove("border");
+      break;
+    case "Escape":
+      clear.classList.remove("border");
+      break;
+    case "Backspace":
+      btnBackspace.classList.remove("border");
+      break;
+    case "Delete":
+      clear.classList.remove("border");
+      break;
+  }
+});
+
 const keyboard = document.addEventListener("keydown", (e) => {
   switch (e.key) {
     case "0":
+      btn0.classList.add("border");
       zeroAction();
       break;
     case "1":
+      btn1.classList.add("border");
       oneAction();
       break;
     case "2":
+      btn2.classList.add("border");
       twoAction();
       break;
     case "3":
+      btn3.classList.add("border");
       threeAction();
       break;
     case "4":
+      btn4.classList.add("border");
       fourAction();
       break;
     case "5":
+      btn5.classList.add("border");
       fiveAction();
       break;
     case "6":
+      btn6.classList.add("border");
       sixAction();
       break;
     case "7":
+      btn7.classList.add("border");
       sevenAction();
       break;
     case "8":
+      btn8.classList.add("border");
       eightAction();
       break;
     case "9":
+      btn9.classList.add("border");
       nineAction();
       break;
     case ".":
+      btnDecimalPoint.classList.add("border");
       decimalPointAction();
       break;
     case "=":
+      btnEquals.classList.add("border");
       equalsAction();
       break;
     case "/":
+      btnDividedBy.classList.add("border");
       divideAction();
       break;
     case "*":
+      btnTimes.classList.add("border");
       timesAction();
       break;
     case "-":
+      btnMinus.classList.add("border");
       minusAction();
       break;
     case "+":
+      btnPlus.classList.add("border");
       plusAction();
       break;
     case "Enter":
+      btnEquals.classList.add("border");
       equalsAction();
       break;
     case "Escape":
+      clear.classList.add("border");
       clearAction();
       break;
     case "Backspace":
+      btnBackspace.classList.add("border");
       backspaceAction();
       break;
     case "Delete":
+      clear.classList.add("border");
       clearAction();
       break;
   }
@@ -274,8 +359,10 @@ function divideAction() {
   lastBtnPressedWasEquals = false;
 }
 function backspaceAction() {
-  currentValue = currentValue.slice(0, -1);
-  updateDisplay(currentValue);
+  if (currentValue.length > 1) {
+    currentValue = currentValue.slice(0, -1);
+    updateDisplay(currentValue);
+  }
 }
 function equalsAction() {
   //only does a calculation if the user hit a number (as opposed to an operator) before hitting equals,
@@ -315,6 +402,7 @@ function clearAction() {
   updateDisplay(currentValue);
   lastBtnPressedWasEquals = false;
 }
+function highlightButton(btn) {}
 //updateDisplay() prints the results of the calculations and the operands to the display
 function updateDisplay(currentValue) {
   let numberValue = Number(currentValue);
