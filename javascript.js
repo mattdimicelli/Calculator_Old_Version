@@ -402,12 +402,12 @@ function clearAction() {
   updateDisplay(currentValue);
   lastBtnPressedWasEquals = false;
 }
-function highlightButton(btn) {}
+
 //updateDisplay() prints the results of the calculations and the operands to the display
 function updateDisplay(currentValue) {
   let numberValue = Number(currentValue);
   if (Number.isInteger(numberValue) === false) {
-    display.textContent = numberValue.toFixed(102 + 2);
+    display.textContent = numberValue.toFixed(10);
   } else {
     display.textContent = currentValue;
   }
