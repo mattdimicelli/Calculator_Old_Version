@@ -3,7 +3,7 @@
 
 ## Overview
 
-The updated version of this project can be found [here](https://github.com/mattdimicelli/calculator2)
+The updated version of this project can be found [here](https://github.com/mattdimicelli/No_Framework_Calculator)
 
 A basic calculator app. It evaluates a single pair of operands at at time, but 
 allows the user to operate on the result of the previous equation.  
@@ -24,8 +24,8 @@ The design requirements from The Odin Project to build a Calculator app are deta
 
 ### Links
 
-- [Live site](https://mattdimicelli.github.io/calculator/)
-- [Repo](https://github.com/mattdimicelli/calculator)
+- [Live site](https://mattdimicelli.github.io/Calculator_Old_Version/)
+- [Repo](https://github.com/mattdimicelli/Calculator_Old_Version)
 
 ## My process
 
